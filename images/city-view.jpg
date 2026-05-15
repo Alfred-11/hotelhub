@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#e8eaf6"/>
+  <rect x="50" y="80" width="40" height="120" fill="#5c6bc0"/>
+  <rect x="100" y="60" width="40" height="140" fill="#3f51b5"/>
+  <rect x="150" y="100" width="40" height="100" fill="#5c6bc0"/>
+  <rect x="200" y="40" width="40" height="160" fill="#3f51b5"/>
+  <rect x="60" y="100" width="20" height="20" fill="#c5cae9"/>
+  <rect x="60" y="130" width="20" height="20" fill="#c5cae9"/>
+  <rect x="110" y="80" width="20" height="20" fill="#c5cae9"/>
+  <rect x="110" y="110" width="20" height="20" fill="#c5cae9"/>
+  <rect x="110" y="140" width="20" height="20" fill="#c5cae9"/>
+  <rect x="160" y="120" width="20" height="20" fill="#c5cae9"/>
+  <rect x="160" y="150" width="20" height="20" fill="#c5cae9"/>
+  <rect x="210" y="60" width="20" height="20" fill="#c5cae9"/>
+  <rect x="210" y="90" width="20" height="20" fill="#c5cae9"/>
+  <rect x="210" y="120" width="20" height="20" fill="#c5cae9"/>
+  <rect x="210" y="150" width="20" height="20" fill="#c5cae9"/>
+  <text x="150" y="180" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">City View Inn</text>
+</svg>

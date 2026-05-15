@@ -1,0 +1,10 @@
+<svg xmlns="	https://www.bing.com/th/id/OIP.H6geASgKG3cXH84LjbJ…=245&h=211&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2" width="300" height="200" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f0f0f0"/>
+  <rect x="50" y="30" width="200" height="140" fill="#d1c4e9"/>
+  <rect x="80" y="50" width="50" height="70" fill="#9575cd"/>
+  <rect x="170" y="50" width="50" height="70" fill="#9575cd"/>
+  <rect x="80" y="130" width="140" height="20" fill="#7e57c2"/>
+  <rect x="130" y="100" width="40" height="30" fill="#7e57c2"/>
+  <text x="150" y="180" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">Grand Palace Hotel</text>
+  <circle cx="250" cy="40" r="20" fill="#ffb74d"/>
+</svg>

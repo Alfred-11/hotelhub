@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f5f5f5"/>
+  <rect x="70" y="40" width="160" height="120" fill="#ffecb3"/>
+  <rect x="90" y="60" width="40" height="60" fill="#ffe082"/>
+  <rect x="170" y="60" width="40" height="60" fill="#ffe082"/>
+  <rect x="90" y="130" width="120" height="20" fill="#ffd54f"/>
+  <rect x="130" y="60" width="40" height="20" fill="#ffd54f"/>
+  <text x="150" y="180" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">Luxury Suites</text>
+  <text x="150" y="100" font-family="Arial" font-size="16" text-anchor="middle" fill="#bf360c">★★★★★</text>
+</svg>
