@@ -1,0 +1,100 @@
+CREATE TABLE users (
+  id INT NOT NULL AUTO_INCREMENT,
+  first_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50),
+  email VARCHAR(100) NOT NULL UNIQUE,
+  phone VARCHAR(15),
+  dob DATE,
+  gender VARCHAR(10),
+  location VARCHAR(100),
+  password VARCHAR(255),
+  google_id VARCHAR(100) UNIQUE,
+  reset_token VARCHAR(255),
+  role VARCHAR(20) DEFAULT 'user',
+  PRIMARY KEY (id)
+);
+
+
+CREATE TABLE hotels (
+    hotel_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    location VARCHAR(100),
+    description TEXT,
+    address TEXT,
+    image_main VARCHAR(255),     
+    image_gallery1 VARCHAR(255), 
+    image_gallery2 VARCHAR(255),
+    image_gallery3 VARCHAR(255), 
+    checkin_time VARCHAR(20),
+    checkout_time VARCHAR(20),
+    cancellation_policy TEXT,
+    payment_policy TEXT,
+    rating INT(1) DEFAULT 0;
+    price DECIMAL(10,2) DEFAULT 0;
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE hotel_facilities (
+    facility_id INT AUTO_INCREMENT PRIMARY KEY,
+    hotel_id INT,
+    facility_name VARCHAR(100),
+    FOREIGN KEY (hotel_id) REFERENCES hotels(hotel_id) ON DELETE CASCADE
+);
+
+
+CREATE TABLE rooms (
+    room_id INT AUTO_INCREMENT PRIMARY KEY,
+    hotel_id INT,
+    room_type VARCHAR(100),
+    price_per_night DECIMAL(10,2),
+    capacity VARCHAR(50),
+    beds VARCHAR(100),
+    FOREIGN KEY (hotel_id) REFERENCES hotels(hotel_id) ON DELETE CASCADE
+);
+
+
+CREATE TABLE bookings (
+    booking_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    hotel_id INT NOT NULL,
+    room_type VARCHAR(100) NOT NULL,
+    checkin_date DATE NOT NULL,
+    checkout_date DATE NOT NULL,
+    total_nights INT NOT NULL,
+    total_price DECIMAL(10,2) NOT NULL,
+    booking_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    status ENUM('pending', 'confirmed', 'cancelled') NOT NULL DEFAULT 'pending',
+    payment_id VARCHAR(100),
+
+    FOREIGN KEY (user_id) REFERENCES users(id)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE,
+
+    FOREIGN KEY (hotel_id) REFERENCES hotels(hotel_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    FOREIGN KEY (payment_id) REFERENCES payments(payment_id)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE
+);
+
+
+CREATE TABLE payments (
+    payment_id VARCHAR(100) PRIMARY KEY,
+    order_id VARCHAR(100) NOT NULL,
+    booking_id INT,
+    amount_paid DECIMAL(10,2) NOT NULL,
+    offer_id VARCHAR(100), -- optional
+    status ENUM('success', 'failed', 'pending') NOT NULL DEFAULT 'pending',
+    method VARCHAR(50),
+    payment_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    razorpay_signature TEXT,
+
+    FOREIGN KEY (booking_id) REFERENCES bookings(booking_id)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE
+);
+
+
