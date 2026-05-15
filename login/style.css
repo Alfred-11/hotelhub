@@ -1,0 +1,184 @@
+/* Import Poppins font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainColor: #6c63ff; /* Updated theme color */
+  --labelColor: #555;
+  --whiteColor: #fff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #a1d8f7, #c2d6f9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 30px auto;
+}
+
+.wrapper {
+  width: 400px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Form container styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .btn {
+  margin: 20px 0;
+}
+
+.form-container.active {
+  display: flex;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #555;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+/* Form group */
+.form-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px 12px 16px;
+  font-size: 16px;
+  border: 0.1rem solid var(--labelColor);
+  border-radius: 0.5rem;
+  outline: none;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #0091e6;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  height: 48px;
+  background-color: #0079c2;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+/* Links */
+.link {
+  text-align: center;
+  font-size: 14px;
+}
+
+.link a {
+  color: #0091e6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link a:hover,
+.forgot-pass a:hover {
+  color: #005fa3;
+}
+
+/* Forgot password */
+.forgot-pass {
+  text-align: left;
+  margin-top: -15px;
+}
+
+.forgot-pass a {
+  font-size: 14px;
+  color: #0091e6;
+  text-decoration: none;
+}
+
+.forgot-password .btn {
+  margin-bottom: 20px;
+}
+
+.or-divider {
+  text-align: center;
+  font-size: 16px;
+  color: #7a7878;
+  margin: 10px 0;
+}
+
+.divider-line {
+  border: none;
+  border-top: 1.5px solid #ccc;
+  margin: 30px 0;
+}
+
+/* Google Sign-in container */
+.g_id_signin {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 1.5px solid #0079c2;
+  border-radius: 5px;
+}
+
+.g_id_signin span {
+  font-size: 16px;
+}
+
+.g_id_signin > div {
+  width: 100% !important;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .wrapper {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+  box-shadow: 0 0 0 1000px #fff inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
